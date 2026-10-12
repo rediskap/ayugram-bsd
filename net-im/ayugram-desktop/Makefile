@@ -1,5 +1,5 @@
 PORTNAME=	ayugram-desktop
-DISTVERSION=	7.0.9
+DISTVERSION=	7.2.9
 CATEGORIES=	net-im
 
 MAINTAINER=	dimred@icloud.com
@@ -18,7 +18,8 @@ BUILD_DEPENDS=	boost-libs>0:devel/boost-libs \
 		yasm:devel/yasm \
 		git:devel/git \
 		${LOCALBASE}/lib/libtde2e.a:net-im/tde2e \
-		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt
+		${LOCALBASE}/lib/libtg_owt.a:net-im/tg_owt \
+                ${LOCALBASE}/lib/libtlottie.a:graphics/tlottie
 
 LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libada.so:devel/libada \
@@ -41,8 +42,7 @@ LIB_DEPENDS=	libabsl_base.so:devel/abseil \
 		libxxhash.so:devel/xxhash \
 		libvpx.so:multimedia/libvpx \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
-		libxkbcommon.so:x11/libxkbcommon \
-                librlottie.so:graphics/rlottie
+		libxkbcommon.so:x11/libxkbcommon
 
 USES=		cmake compiler:c++20-lang desktop-file-utils gl gnome jpeg kde:6 \
 		localbase minizip openal pkgconfig python:build qt:6 ssl xorg
